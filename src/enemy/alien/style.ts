@@ -13,13 +13,7 @@ export const AlienWrapper = styled.div`
   .noselect {
     user-select: none;
   }
-  .life {
-    display: block;
-    position: relative;
-    background: red;
-    height: 3px;
-    margin-bottom: 3px;
-  }
+
   img {
     width: 100%;
     height: auto;
@@ -50,4 +44,13 @@ export const AlienWrapper = styled.div`
       left: 0%;
     }
   }
+`;
+
+export const Life = styled.span`
+  width: 100%;
+  display: block;
+  position: relative;
+  background: red;
+  height: 3px;
+  margin-bottom: 3px;
 `;

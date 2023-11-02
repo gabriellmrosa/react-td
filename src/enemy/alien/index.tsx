@@ -1,12 +1,26 @@
 "use client";
 
 import Image from "next/image.js";
-import { AlienWrapper } from "./style";
+import { AlienWrapper, Life } from "./style";
+import { useEffect, useRef } from "react";
 
-const Alien = ({ refi }: { refi: any }) => {
+interface Props {
+  delay: number;
+}
+
+const Alien = ({ delay }: Props) => {
+  const towerDiv = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    if (!(towerDiv.current === null)) {
+      towerDiv.current.style.cssText = `animation:alienWalk 10s infinite both ${delay}s linear; opacity:1;`;
+    }
+    console.log(towerDiv);
+  }, [delay]);
+
   return (
-    <AlienWrapper ref={refi}>
-      <span className="life w-100"></span>
+    <AlienWrapper ref={towerDiv}>
+      <Life></Life>
       <Image
         width={100}
         height={100}

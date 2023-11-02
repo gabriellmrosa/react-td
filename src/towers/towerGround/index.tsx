@@ -1,9 +1,9 @@
 "use client";
 
-import React, { RefObject, useState } from "react";
+import React, { useState } from "react";
 import { PropsToShoot, ShootWrapper, TowerWrapper } from "./style";
 
-const TowerGround = ({ refi }: { refi: RefObject<HTMLDivElement> }) => {
+const TowerGround = () => {
   const [anima, setAnima] = useState<PropsToShoot>({
     top: 0,
     left: 0,
@@ -13,7 +13,6 @@ const TowerGround = ({ refi }: { refi: RefObject<HTMLDivElement> }) => {
 
   return (
     <TowerWrapper
-      ref={refi}
       onClick={() =>
         setAnima((old) => ({
           shoot: old.shoot === 1 ? 0 : 1,
