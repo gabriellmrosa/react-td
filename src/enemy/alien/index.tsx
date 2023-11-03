@@ -14,6 +14,10 @@ const Alien = ({ delay }: Props) => {
   useEffect(() => {
     if (!(towerDiv.current === null)) {
       towerDiv.current.style.cssText = `animation:alienWalk 10s infinite both ${delay}s linear;`;
+
+      // const { left, top } = towerDiv.current.getBoundingClientRect();
+
+      // console.log("left top", left, top);
     }
   }, [delay]);
 
