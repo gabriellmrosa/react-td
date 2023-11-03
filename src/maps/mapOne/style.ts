@@ -7,6 +7,7 @@ export const MapOneWrapper = styled.div`
   height: 500px;
   background: url(${BgMapOne.src}) no-repeat;
   background-size: cover;
+  overflow: hidden;
 
   input[type="checkbox"] {
     display: none;

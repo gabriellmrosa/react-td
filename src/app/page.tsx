@@ -3,7 +3,7 @@
 import Alien from "@/enemy/alien";
 import MapOne from "@/maps/mapOne";
 import TowerGround from "@/towers/towerGround";
-import React, { useEffect, useRef, useState } from "react";
+import React, { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 
 export default function Home() {
@@ -12,10 +12,6 @@ export default function Home() {
       life: 100,
     }),
   });
-
-  useEffect(() => {
-    (async () => {})();
-  }, []);
 
   return (
     <MapOne>

@@ -9,7 +9,6 @@ export const AlienWrapper = styled.div`
   overflow: hidden;
   transform: translate(-50%, -50%);
   border: 1px solid rgba(255, 255, 255, 0.2);
-  opacity: 0;
   .noselect {
     user-select: none;
   }
@@ -21,7 +20,7 @@ export const AlienWrapper = styled.div`
   @keyframes alienWalk {
     0% {
       top: 75%;
-      left: 100%;
+      left: 103%;
     }
     20% {
       top: 55%;
@@ -41,7 +40,7 @@ export const AlienWrapper = styled.div`
     }
     100% {
       top: 80%;
-      left: 0%;
+      left: -3%;
     }
   }
 `;
