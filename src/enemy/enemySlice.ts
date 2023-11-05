@@ -20,18 +20,11 @@ const enemySlice = createSlice({
   name: "enemySlice",
   initialState: aliens,
   reducers: {
-    alienAdded(state, action) {
-      console.log("state : action", current(state), "-", action.payload);
-      // state.map((element, index) =>
-      //   action.payload.index === index ? {} : element
-      // );
+    refreshPositions(state, action) {
+      return action.payload;
     },
   },
 });
 
-export const { alienAdded } = enemySlice.actions;
+export const { refreshPositions } = enemySlice.actions;
 export default enemySlice.reducer;
-
-// life: action.payload.life,
-// left: action.payload.left,
-// top: action.payload.top,

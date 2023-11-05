@@ -6,23 +6,24 @@ import { useEffect, useRef } from "react";
 
 interface Props {
   delay: number;
+  myRef: any;
 }
 
-const Alien = ({ delay }: Props) => {
-  const towerDiv = useRef<HTMLDivElement | null>(null);
+const Alien = ({ delay, myRef }: Props) => {
+  // const towerDiv = useRef<HTMLDivElement | null>(null);
 
-  useEffect(() => {
-    if (!(towerDiv.current === null)) {
-      towerDiv.current.style.cssText = `animation:alienWalk 10s infinite both ${delay}s linear;`;
+  // useEffect(() => {
+  //   if (!(towerDiv.current === null)) {
+  //     towerDiv.current.style.cssText = `animation:alienWalk 10s infinite both ${delay}s linear;`;
 
-      // const { left, top } = towerDiv.current.getBoundingClientRect();
+  //     // const { left, top } = towerDiv.current.getBoundingClientRect();
 
-      // console.log("left top", left, top);
-    }
-  }, [delay]);
+  //     // console.log("left top", left, top);
+  //   }
+  // }, [delay]);
 
   return (
-    <AlienWrapper ref={towerDiv}>
+    <AlienWrapper ref={myRef}>
       <Life></Life>
       <Image
         width={100}
